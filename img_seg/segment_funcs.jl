@@ -106,7 +106,6 @@ function create_lapacian(U, weight)
 		row = (U_row - 1)*n + U_col			
 		d_sum = 0
 		
-		W[row,row] = 0
 		x_pos = [ U_row U_col ]
 		x_int = U[U_row,U_col]
 	
