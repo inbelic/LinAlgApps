@@ -77,7 +77,7 @@ end
 # returns weight used for assessment in spectral clustering
 function sample_weight(x_pos, y_pos, x_int, y_int)
 	dist_weighting = 150
-	int_weighting  = 2/1000
+	int_weighting  = 1/500
 	
 	dist_val = norm(x_pos - y_pos)^2
 	dist_val = exp(-dist_val/dist_weighting)
