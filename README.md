@@ -24,7 +24,7 @@ approximation to take for each matrix. We then recreate a coloured image from th
 approximate R,G,B matrices. In the samples we have a k = 5,10 and 50 approximations for the 
 three images lake.tiff, mandrill.tiff and waterfall.tiff.
 
-So we see that as k is around 50 our approximations are very accurate.
+So we see that as k is around 50 our approximations are quite accurate.
 So what makes it worthwhile? Well in the case of the lake.tiff image it was a 900x997 image
 so we require a matrix with 879300 elements that has a R,G,B value stored in each
 to represent this image. Yet if we consider the k=50 approximation of the image we only need
