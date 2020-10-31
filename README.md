@@ -35,6 +35,23 @@ So we can then do the same process on other data sets that are able to be repres
 and we can look at the "most important" data points.
 
 
+## Image Denoising
+Image denoising is and will only become more and more prevalent in the future. Currently,
+one of the biggest uses of image denoising is in medical imaging and going into the future
+we see that synthetic images generated from raytracing will produce noise if we don't run
+the raytracing for a long period of time. So as these simulations get increasingly complex
+we can instead raytrace for a small time and then clean up the synthetic image using image denoising.
+
+So I am presenting a denoising function that uses a Lapacian Regularization in the denoising 
+function. However, we could easily modify the code to take into account Tikhonov Regularization 
+or Total Variation Regularization in place of the create_lapacian function to alter our results. 
+
+Our create_lapacian function creates a Lapacian graph of the matrix representation U with the
+equation 4U(i,i) - U(i,i+1) - U(i+1,i) - U(i,i-1) - U(i-1,i). 
+
+Then the "core" of the denoising algorithm is to repeatedly solve the system U^(k+1)*x = U^k
+where x iteratively becomes closer to the denoised image. 
+
 
 
 
